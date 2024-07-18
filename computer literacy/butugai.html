@@ -1,20 +1,199 @@
 <!DOCTYPE html>
 <html lang="ja">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: aqua;
+      padding: 10px;
+      color: black;
+    }
+
+    .left-header h1 {
+    margin: 0;
+    }
+
+    .right-header p {
+    margin: 0;
+    }
+
+    nav {
+    background-color: #a7a7ff;
+    padding: 10px;
+    }
+
+    .breadcrumb {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    }
+
+    .breadcrumb li {
+    margin-right: 10px;
+    }
+
+    .breadcrumb li::after {
+    content: '>';
+    margin-left: 10px;
+    }
+
+    .breadcrumb li:last-child::after {
+    content: '';
+    }
+
+    .main-content {
+    display: flex;
+    flex-direction: row-reverse;
+    }
+
+    .sidebar {
+    width: 25%;
+    background-color: #F9A7B0;
+    padding: 10px;
+    }
+
+    .sidebar nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    }
+
+    .sidebar nav ul li {
+    margin-bottom: 10px;
+    }
+
+    .content {
+    width: 75%;
+    background-color: #ffffff;
+    padding: 10px;
+    }
+
+    .btn,
+    a.btn,
+    button.btn {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1;
+    position: relative;
+    display: inline-block;
+    padding: 0.3rem 1rem;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: all 0.1s;
+    transition: all 0.1s;
+    text-align: center;
+    vertical-align: 0.5rem;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    color: #212529;
+    border-radius: 0.5rem;
+    }
+
+    a.btn-flat {
+    overflow: hidden;
+    padding: 0.6rem 1rem;
+    color: #001529;
+    border-radius: none;
+    background: #90d6f7;
+    }
+
+    .pagination {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    }
+
+    footer {
+    background-color: #92E3A9;
+    padding: 10px;
+    text-align: right;
+    color: black;
+    }
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .breadcrumb {
+        flex-direction: column;
+    }
+
+    .main-content {
+        flex-direction: flex;
+    }
+
+    .sidebar {
+        width: 35%;
+    }
+
+    .content {
+        width: 65%;
+    }
+}
+  </style>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Introduction</title>
   </head>
-  <h1>物理学概論第一動画まとめ</h1>
   <body>
-    <h2><a href="https://youtu.be/iLqKESaauq4?si=FjDlDWQJlzI59V2s">京都大学波動論Ⅰ</a></h2>
-    <h2><a href="https://youtu.be/VRRgJ4FAkYY?si=lCoJnKp3orhaaYT_">京都大学波動論Ⅱ</a></h2>
-    <h2><a href="https://youtu.be/HPfbLinQP8c?si=zdtc81IKpYNcnzEI">京都大学波動論Ⅲ</a></h2>
-    <h2><a href="https://youtu.be/2w2bKXkLR8Q?si=dGY7eeccCcjg0X35">京都大学波動論Ⅳ</a></h2>
-    <h2><a href="https://youtu.be/po97dnBfoco?si=_zx9f_0JfNzowX-x">ヨビノリ　微分方程式とは何か</a></h2>
-    <h2><a href="https://youtu.be/uPRY-KUl4fg?si=h1zbhrVbE0HoOvz9">ヨビノリ　変形分離形</a></h2>
-    <h2><a href="https://youtu.be/QeYOiFU6UNs?si=PJUGspUBsZ-Yt2JA">ヨビノリ　一回線形微分方程式</a></h2>
-    <h2><a href="https://youtu.be/4E0NvIqYZvk?si=a5iQVi41vNtC2Vqm">ヨビノリ　二階線形同次微分方程式</a></h2>
-    <h2><a href="https://youtu.be/-N9W54BFD0Y?si=D9nKqvioNDhjYB5z">ヨビノリ　二階線形非同次微分方程式</a></h2>
- </body>
+    <header>
+      <div class="left-header">
+        <h1>期末テスト勉強用動画まとめ</h1>
+      </div>
+      <div class="right-header">
+        <p>作成者：　　</p>
+        <p>井ノ口雄晟</p>
+        <p>木上雄亮</p>
+        <p>小石悠真</p>
+        <p>坂口剛志</p>
+        </p>
+      </div>
+    </header>
+    <nav>
+      <ul class="breadcrumb">
+        <li><a href="conrite.html">ホーム</a></li>
+        <li>物理学概論第一</li>
+      </ul>
+    </nav>
+    <div class="main-content">
+      <aside class="sidebar">
+        <p><a href="conrite.html">ホーム</a></p>
+        <p><a href="biseki.html">微分積分学第一</a></p>
+        <p><a href="sennkei.html">線形代数学第一</a></p>
+        <p><a href="kagai.html">化学概論第一</a></p>
+        <p><a href="butugai.html">物理学概論第一</a></p>
+        <p><a href="konrite.html">コンピュータリテラシー</a></p>
+        <p><a href="germany.html">必修・選択独語第一</a></p>
+      </aside>
+      <section class="content">
+        <h1>物理学概論第一動画まとめ</h1>
+        <a href="https://youtu.be/iLqKESaauq4?si=FjDlDWQJlzI59V2s"class="btn btn-flat"><span>　　京都大学　波動論Ⅰ　　　　　　></a>
+        <a href="https://youtu.be/VRRgJ4FAkYY?si=lCoJnKp3orhaaYT_"class="btn btn-flat"><span>　　京都大学　波動論Ⅱ　　　　　　></a>
+        <a href="https://youtu.be/HPfbLinQP8c?si=zdtc81IKpYNcnzEI"class="btn btn-flat"><span>　　京都大学　波動論Ⅲ　　　　　　></a>
+        <a href="https://youtu.be/2w2bKXkLR8Q?si=dGY7eeccCcjg0X35"class="btn btn-flat"><span>　　京都大学　波動論Ⅳ　　　　　　></a>
+        <a href="https://youtu.be/po97dnBfoco?si=_zx9f_0JfNzowX-x"class="btn btn-flat"><span>ヨビノリ　微分方程式とは何か　　　></a>
+        <a href="https://youtu.be/uPRY-KUl4fg?si=h1zbhrVbE0HoOvz9"class="btn btn-flat"><span>ヨビノリ　変形分離形　　　　　　　></a>
+        <a href="https://youtu.be/QeYOiFU6UNs?si=PJUGspUBsZ-Yt2JA"class="btn btn-flat"><span>ヨビノリ　一回線形微分方程式　　　></a>
+        <a href="https://youtu.be/4E0NvIqYZvk?si=a5iQVi41vNtC2Vqm"class="btn btn-flat"><span>ヨビノリ　二階線形同次微分方程式　></a>
+        <a href="https://youtu.be/-N9W54BFD0Y?si=D9nKqvioNDhjYB5z"class="btn btn-flat"><span>ヨビノリ　二階線形非同次微分方程式></a>
+      </ol>
+      </section>
+    </div>
+    <footer>
+      <p>2024 Computer Literacy</p>
+  </footer>
+    </body>
 </html>
