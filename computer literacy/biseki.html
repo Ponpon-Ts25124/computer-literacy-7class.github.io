@@ -1,24 +1,202 @@
 <!DOCTYPE html>
 <html lang="ja">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: aqua;
+      padding: 10px;
+      color: black;
+    }
+
+    .left-header h1 {
+    margin: 0;
+    }
+
+    .right-header p {
+    margin: 0;
+    }
+
+    nav {
+    background-color: #a7a7ff;
+    padding: 10px;
+    }
+
+    .breadcrumb {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    }
+
+    .breadcrumb li {
+    margin-right: 10px;
+    }
+
+    .breadcrumb li::after {
+    content: '>';
+    margin-left: 10px;
+    }
+
+    .breadcrumb li:last-child::after {
+    content: '';
+    }
+
+    .main-content {
+    display: flex;
+    flex-direction: row-reverse;
+    }
+
+    .sidebar {
+    width: 25%;
+    background-color: #F9A7B0;
+    padding: 10px;
+    }
+
+    .sidebar nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    }
+
+    .sidebar nav ul li {
+    margin-bottom: 10px;
+    }
+
+    .content {
+    width: 75%;
+    background-color: #ffffff;
+    padding: 10px;
+    }
+
+    .btn,
+    a.btn,
+    button.btn {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1;
+    position: relative;
+    display: inline-block;
+    padding: 0.3rem 1rem;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: all 0.1s;
+    transition: all 0.1s;
+    text-align: center;
+    vertical-align: 0.5rem;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    color: #212529;
+    border-radius: 0.5rem;
+    }
+
+    a.btn-flat {
+    overflow: hidden;
+    padding: 0.6rem 1rem;
+    color: #001529;
+    border-radius: none;
+    background: #90d6f7;
+    }
+
+    .pagination {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    }
+
+    footer {
+    background-color: #92E3A9;
+    padding: 10px;
+    text-align: right;
+    color: black;
+    }
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .breadcrumb {
+        flex-direction: column;
+    }
+
+    .main-content {
+        flex-direction: flex;
+    }
+
+    .sidebar {
+        width: 35%;
+    }
+
+    .content {
+        width: 65%;
+    }
+}
+  </style>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Introduction</title>
   </head>
-  <h1>微分積分学第一動画まとめ</h1>
   <body>
-    <h2><a href="https://youtu.be/qzd5iXKHkiU?si=6zowwoLMiwKt910d">テイラー展開</a></h2>
-    <h2><a href="https://youtu.be/y03nY420x94?si=q9udRMhgkD-wB9oS">ライプニッツの公式</a></h2>
-    <h2><a href="https://youtu.be/wAwVmQSaiuk?si=JhmK9RMyCKwkAwHB">逆三角関数</a></h2>
-    <h2><a href="https://youtu.be/5jJOA4TZSq8?si=oaEDlDoI1LGKf4pG">広義積分Ⅰ</a></h2>
-    <h2><a href="https://youtu.be/jNDyKLJsZfY?si=Kd8NLlYkp4jV5Fbe">広義積分Ⅱ</a></h2>
-    <h2><a href="https://youtu.be/K-HwL3N4P5Q?si=k_jdaqR93x5bKiv7">ガンマ関数Ⅰ</a></h2>
-    <h2><a href="https://youtu.be/dy40up4jnc0?si=O9a0yGqcAblmm148">ガンマ関数Ⅱ</a></h2>
-    <h2>曲線の長さ</h2>
-    <ol>
-      <h3><a href="https://youtu.be/RbjiHzlIdwg?si=x7QeigWHsjB6Kbht">一般的なパターン</a></h3>
-      <h3><a href="https://youtu.be/1hFXDrFsLSg?si=0Rd8B9aCYWSQAHJF">パラメータ</a></h3>
-      <h3><a href="https://youtu.be/SrPng-C0zwE?si=wVkGdAy4-_xP27R6">極座標</a></h3>
-    </ol>
- </body>
+    <header>
+      <div class="left-header">
+        <h1>期末テスト勉強用動画まとめ</h1>
+      </div>
+      <div class="right-header">
+        <p>作成者：　　</p>
+        <p>井ノ口雄晟</p>
+        <p>木上雄亮</p>
+        <p>小石悠真</p>
+        <p>坂口剛志</p>
+        </p>
+      </div>
+    </header>
+    <nav>
+      <ul class="breadcrumb">
+        <li><a href="conrite.html">ホーム</a></li>
+        <li>微分積分学第一</li>
+      </ul>
+    </nav>
+    <div class="main-content">
+      <aside class="sidebar">
+        <p><a href="conrite.html">ホーム</a></p>
+        <p><a href="biseki.html">微分積分学第一</a></p>
+        <p><a href="sennkei.html">線形代数学第一</a></p>
+        <p><a href="kagai.html">化学概論第一</a></p>
+        <p><a href="butugai.html">物理学概論第一</a></p>
+        <p><a href="konrite.html">コンピュータリテラシー</a></p>
+        <p><a href="germany.html">必修・選択独語第一</a></p>
+      </aside>
+      <section class="content">
+        <h1>微分積分学第一動画まとめ</h1>
+        <a href="https://youtu.be/qzd5iXKHkiU?si=6zowwoLMiwKt910d"class="btn btn-flat"><span>　　テイラー展開　></a>
+        <a href="https://youtu.be/y03nY420x94?si=q9udRMhgkD-wB9oS"class="btn btn-flat"><span>ライプニッツの公式></a>
+        <a href="https://youtu.be/wAwVmQSaiuk?si=JhmK9RMyCKwkAwHB"class="btn btn-flat"><span>　　 逆三角関数 　 ></a>
+        <a href="https://youtu.be/5jJOA4TZSq8?si=oaEDlDoI1LGKf4pG"class="btn btn-flat"><span>　　 広義積分Ⅰ 　 ></a>
+        <a href="https://youtu.be/jNDyKLJsZfY?si=Kd8NLlYkp4jV5Fbe"class="btn btn-flat"><span>　　 広義積分Ⅱ 　 ></a>
+        <a href="https://youtu.be/K-HwL3N4P5Q?si=k_jdaqR93x5bKiv7"class="btn btn-flat"><span>　　ガンマ関数Ⅰ　></a>
+        <a href="https://youtu.be/dy40up4jnc0?si=O9a0yGqcAblmm148"class="btn btn-flat"><span>　　ガンマ関数Ⅱ　></a>
+        <h2>曲線の長さ</h2>
+        <ol>
+          <a href="https://youtu.be/RbjiHzlIdwg?si=x7QeigWHsjB6Kbht"class="btn btn-flat"><span>一般的なパターン　></a>
+          <a href="https://youtu.be/1hFXDrFsLSg?si=0Rd8B9aCYWSQAHJF"class="btn btn-flat"><span>　　パラメータ　　></a>
+          <a href="https://youtu.be/SrPng-C0zwE?si=wVkGdAy4-_xP27R6"class="btn btn-flat"><span>　　　極座標　　　></a>
+        </ol>
+      </section>
+    </div>
+    <footer>
+      <p>2024 Computer Literacy</p>
+  </footer>
+    </body>
 </html>
