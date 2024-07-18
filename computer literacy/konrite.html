@@ -1,26 +1,205 @@
 <!DOCTYPE html>
 <html lang="ja">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: aqua;
+      padding: 10px;
+      color: black;
+    }
+
+    .left-header h1 {
+    margin: 0;
+    }
+
+    .right-header p {
+    margin: 0;
+    }
+
+    nav {
+    background-color: #a7a7ff;
+    padding: 10px;
+    }
+
+    .breadcrumb {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    }
+
+    .breadcrumb li {
+    margin-right: 10px;
+    }
+
+    .breadcrumb li::after {
+    content: '>';
+    margin-left: 10px;
+    }
+
+    .breadcrumb li:last-child::after {
+    content: '';
+    }
+
+    .main-content {
+    display: flex;
+    flex-direction: row-reverse;
+    }
+
+    .sidebar {
+    width: 25%;
+    background-color: #F9A7B0;
+    padding: 10px;
+    }
+
+    .sidebar nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    }
+
+    .sidebar nav ul li {
+    margin-bottom: 10px;
+    }
+
+    .content {
+    width: 75%;
+    background-color: #ffffff;
+    padding: 10px;
+    }
+
+    .btn,
+    a.btn,
+    button.btn {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1;
+    position: relative;
+    display: inline-block;
+    padding: 0.3rem 1rem;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: all 0.1s;
+    transition: all 0.1s;
+    text-align: center;
+    vertical-align: 0.5rem;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    color: #212529;
+    border-radius: 0.5rem;
+    }
+
+    a.btn-flat {
+    overflow: hidden;
+    padding: 0.6rem 1rem;
+    color: #001529;
+    border-radius: none;
+    background: #90d6f7;
+    }
+
+    .pagination {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    }
+
+    footer {
+    background-color: #92E3A9;
+    padding: 10px;
+    text-align: right;
+    color: black;
+    }
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .breadcrumb {
+        flex-direction: column;
+    }
+
+    .main-content {
+        flex-direction: flex;
+    }
+
+    .sidebar {
+        width: 35%;
+    }
+
+    .content {
+        width: 65%;
+    }
+}
+  </style>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Introduction</title>
   </head>
-    <h1>コンリテ動画プレイリストまとめ</h1>
   <body>
-    <h2><a href="https://youtube.com/playlist?list=PLpVvFIA4A2YV5Ad-W_t2eQJO20yb0K-Pb&si=VQneJytaHygXxcmx">第一回</a></h2>
-    <h2><a href="https://youtube.com/playlist?list=PLpVvFIA4A2YW3itDUS2qZrVwEw6YoHo3r&si=4uEEMEil68F7kmtp"> 第二回</a></h2>
-    <h2><a href="https://youtube.com/playlist?list=PLpVvFIA4A2YXuz1fICsG5FG2l5ap_j93t&si=7eHNWbXDQaUyJVCD"> 第三回</a></h2>
-    <h2><a href="https://youtube.com/playlist?list=PLpVvFIA4A2YWNHZZ0HqSJKeouppBUQ5mx&si=K8dTLgdJJXKRn8it">第四回</a></h2>
-    <h2><a href="https://youtube.com/playlist?list=PLpVvFIA4A2YWft5T_x75EV2spEByXolyB&si=h077VGYIBngtq-l-">第五回</a></h2>
-    <h2><a href="https://youtube.com/playlist?list=PLpVvFIA4A2YVo8hX-Z7UfIRryMB4KEcir&si=sdV1keb0sEO41zxr">第六回</a></h2>
-    <h2><a href="https://youtube.com/playlist?list=PLpVvFIA4A2YVMjXyxTPO0A0TWOLvKkvlG&si=qbJqhV02yMhNG2MM">第七回</a></h2>
-    <h2><a href="https://youtube.com/playlist?list=PLpVvFIA4A2YXb3I_laSCDkhpmtwsas2bw&si=qSLku94wsvKvOHMG">第八回</a></h2>
-    <h2><a href="https://youtube.com/playlist?list=PLpVvFIA4A2YXl-9kaK6xhDlaODUgSmE-Y&si=Su7wbpD14Bgqpg70">第九回</a></h2>
-    <h2><a href="https://youtube.com/playlist?list=PLpVvFIA4A2YVblzAAyn1Yu-8wEOBBM0Ec&si=rV_nvJPQWiOrXmnV">第十回</a></h2>
-    <h2><a href="https://youtube.com/playlist?list=PLpVvFIA4A2YUxysE1xAU28toj1SZrTh3O&si=sVVMjN3oo2bsYBW1">第十一回</a></h2>
-    <h2><a href="https://youtube.com/playlist?list=PLpVvFIA4A2YWZ_EZcOMxoAad91KvK8nkQ&si=ZwRVe79mV07jwzLF">第十二回</a></h2>
-    <h2><a href="https://youtube.com/playlist?list=PLpVvFIA4A2YVX2K3GcYyiI5zhEBna4hcT&si=2U4HWxG03Pi0XHxn">第十三回</a></h2>
-    <h2><a href="https://youtube.com/playlist?list=PLpVvFIA4A2YUpVHWorDFvr7DNwNe3ELV5&si=YFmEc7mY_eqjedsY">第十四回</a></h2>
-    <h2><a href="https://youtube.com/playlist?list=PLpVvFIA4A2YVxPtdaASvK4-elp9Cqyq9T&si=xACKmEEOoIa_ZehM">第十五回</a></h2>
- </body>
+    <header>
+      <div class="left-header">
+        <h1>期末テスト勉強用動画まとめ</h1>
+      </div>
+      <div class="right-header">
+        <p>作成者：　　</p>
+        <p>井ノ口雄晟</p>
+        <p>木上雄亮</p>
+        <p>小石悠真</p>
+        <p>坂口剛志</p>
+        </p>
+      </div>
+    </header>
+    <nav>
+      <ul class="breadcrumb">
+        <li><a href="conrite.html">ホーム</a></li>
+        <li>コンピュータリテラシー</li>
+      </ul>
+    </nav>
+    <div class="main-content">
+      <aside class="sidebar">
+        <p><a href="conrite.html">ホーム</a></p>
+        <p><a href="biseki.html">微分積分学第一</a></p>
+        <p><a href="sennkei.html">線形代数学第一</a></p>
+        <p><a href="kagai.html">化学概論第一</a></p>
+        <p><a href="butugai.html">物理学概論第一</a></p>
+        <p><a href="konrite.html">コンピュータリテラシー</a></p>
+        <p><a href="germany.html">必修・選択独語第一</a></p>
+      </aside>
+      <section class="content">
+        <h1>コンリテ動画プレイリストまとめ</h1>
+        <a href="https://youtube.com/playlist?list=PLpVvFIA4A2YV5Ad-W_t2eQJO20yb0K-Pb&si=VQneJytaHygXxcmx"class="btn btn-flat"><span>　　 第一回　　 ></a>
+        <a href="https://youtube.com/playlist?list=PLpVvFIA4A2YW3itDUS2qZrVwEw6YoHo3r&si=4uEEMEil68F7kmtp"class="btn btn-flat"><span>　　 第二回　　 ></a>
+        <a href="https://youtube.com/playlist?list=PLpVvFIA4A2YXuz1fICsG5FG2l5ap_j93t&si=7eHNWbXDQaUyJVCD"class="btn btn-flat"><span>　　 第三回　　 ></a>
+        <a href="https://youtube.com/playlist?list=PLpVvFIA4A2YWNHZZ0HqSJKeouppBUQ5mx&si=K8dTLgdJJXKRn8it"class="btn btn-flat"><span>　　 第四回　　 ></a>
+        <a href="https://youtube.com/playlist?list=PLpVvFIA4A2YWft5T_x75EV2spEByXolyB&si=h077VGYIBngtq-l-"class="btn btn-flat"><span>　　 第五回　　 ></a>
+        <a href="https://youtube.com/playlist?list=PLpVvFIA4A2YVo8hX-Z7UfIRryMB4KEcir&si=sdV1keb0sEO41zxr"class="btn btn-flat"><span>　　 第六回　　 ></a>
+        <a href="https://youtube.com/playlist?list=PLpVvFIA4A2YVMjXyxTPO0A0TWOLvKkvlG&si=qbJqhV02yMhNG2MM"class="btn btn-flat"><span>　　 第七回　　 ></a>
+        <a href="https://youtube.com/playlist?list=PLpVvFIA4A2YXb3I_laSCDkhpmtwsas2bw&si=qSLku94wsvKvOHMG"class="btn btn-flat"><span>　　 第八回　　 ></a>
+        <a href="https://youtube.com/playlist?list=PLpVvFIA4A2YXl-9kaK6xhDlaODUgSmE-Y&si=Su7wbpD14Bgqpg70"class="btn btn-flat"><span>　　 第九回　　 ></a>
+        <a href="https://youtube.com/playlist?list=PLpVvFIA4A2YVblzAAyn1Yu-8wEOBBM0Ec&si=rV_nvJPQWiOrXmnV"class="btn btn-flat"><span>　　 第十回　　 ></a>
+        <a href="https://youtube.com/playlist?list=PLpVvFIA4A2YUxysE1xAU28toj1SZrTh3O&si=sVVMjN3oo2bsYBW1"class="btn btn-flat"><span>　　第十一回 　 ></a>
+        <a href="https://youtube.com/playlist?list=PLpVvFIA4A2YWZ_EZcOMxoAad91KvK8nkQ&si=ZwRVe79mV07jwzLF"class="btn btn-flat"><span>　　第十二回 　 ></a>
+        <a href="https://youtube.com/playlist?list=PLpVvFIA4A2YVX2K3GcYyiI5zhEBna4hcT&si=2U4HWxG03Pi0XHxn"class="btn btn-flat"><span>　　第十三回 　 ></a>
+        <a href="https://youtube.com/playlist?list=PLpVvFIA4A2YUpVHWorDFvr7DNwNe3ELV5&si=YFmEc7mY_eqjedsY"class="btn btn-flat"><span>　　第十四回 　 ></a>
+        <a href="https://youtube.com/playlist?list=PLpVvFIA4A2YVxPtdaASvK4-elp9Cqyq9T&si=xACKmEEOoIa_ZehM"class="btn btn-flat"><span>　　第十五回 　 ></a>
+        </ol>
+      </section>
+    </div>
+    <footer>
+      <p>2024 Computer Literacy</p>
+  </footer>
+    </body>
 </html>
