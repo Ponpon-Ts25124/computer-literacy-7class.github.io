@@ -1,18 +1,197 @@
 <!DOCTYPE html>
 <html lang="ja">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: aqua;
+      padding: 10px;
+      color: black;
+    }
+
+    .left-header h1 {
+    margin: 0;
+    }
+
+    .right-header p {
+    margin: 0;
+    }
+
+    nav {
+    background-color: #a7a7ff;
+    padding: 10px;
+    }
+
+    .breadcrumb {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    }
+
+    .breadcrumb li {
+    margin-right: 10px;
+    }
+
+    .breadcrumb li::after {
+    content: '>';
+    margin-left: 10px;
+    }
+
+    .breadcrumb li:last-child::after {
+    content: '';
+    }
+
+    .main-content {
+    display: flex;
+    flex-direction: row-reverse;
+    }
+
+    .sidebar {
+    width: 25%;
+    background-color: #F9A7B0;
+    padding: 10px;
+    }
+
+    .sidebar nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    }
+
+    .sidebar nav ul li {
+    margin-bottom: 10px;
+    }
+
+    .content {
+    width: 75%;
+    background-color: #ffffff;
+    padding: 10px;
+    }
+
+    .btn,
+    a.btn,
+    button.btn {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1;
+    position: relative;
+    display: inline-block;
+    padding: 0.3rem 1rem;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: all 0.1s;
+    transition: all 0.1s;
+    text-align: center;
+    vertical-align: 0.5rem;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    color: #212529;
+    border-radius: 0.5rem;
+    }
+
+    a.btn-flat {
+    overflow: hidden;
+    padding: 0.6rem 1rem;
+    color: #001529;
+    border-radius: none;
+    background: #90d6f7;
+    }
+
+    .pagination {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    }
+
+    footer {
+    background-color: #92E3A9;
+    padding: 10px;
+    text-align: right;
+    color: black;
+    }
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .breadcrumb {
+        flex-direction: column;
+    }
+
+    .main-content {
+        flex-direction: flex;
+    }
+
+    .sidebar {
+        width: 35%;
+    }
+
+    .content {
+        width: 65%;
+    }
+}
+  </style>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Introduction</title>
   </head>
-    <h1>線形代数代数学第一動画サイトまとめ</h1>
   <body>
-    <h2><a href="https://youtu.be/_TGC3rnWxDc?si=5zFyJMe_3a-HvdxP">行列式の定義と性質</a></h2>
-    <h2><a href="https://youtu.be/VwZ0EtT_UiI?si=YcrZeodaWSq0SsY2">余因子展開</a></h2>
-    <h2><a href="https://youtu.be/VwZ0EtT_UiI?si=c1LvarxY2PqKnIsg">逆行列の定義</a></h2>
-    <h2><a href="https://youtu.be/K9yZYDUHEVQ?si=spE_sRzKakRz4Wpt">掃出し法</a></h2>
-    <h2><a href="https://youtu.be/_TgBFx0jwRQ?si=Ay7EkX9wvGpRAzIb">固有値・固有ベクトル</a></h2>
-    <h2><a href="https://youtu.be/FTC_aekgqCg?si=tqyqbbVcmxFkUyMa">対角化(重解なし)</a></h2>
-    <h2><a href="https://youtu.be/FTC_aekgqCg?si=SU1113hKL0GlezU4">対角化(重解あり)</a></h2>
- </body>
+    <header>
+      <div class="left-header">
+        <h1>期末テスト勉強用動画まとめ</h1>
+      </div>
+      <div class="right-header">
+        <p>作成者：　　</p>
+        <p>井ノ口雄晟</p>
+        <p>木上雄亮</p>
+        <p>小石悠真</p>
+        <p>坂口剛志</p>
+        </p>
+      </div>
+    </header>
+    <nav>
+      <ul class="breadcrumb">
+        <li><a href="conrite.html">ホーム</a></li>
+        <li>線形代数学第一</li>
+      </ul>
+    </nav>
+    <div class="main-content">
+      <aside class="sidebar">
+        <p><a href="conrite.html">ホーム</a></p>
+        <p><a href="biseki.html">微分積分学第一</a></p>
+        <p><a href="sennkei.html">線形代数学第一</a></p>
+        <p><a href="kagai.html">化学概論第一</a></p>
+        <p><a href="butugai.html">物理学概論第一</a></p>
+        <p><a href="konrite.html">コンピュータリテラシー</a></p>
+        <p><a href="germany.html">必修・選択独語第一</a></p>
+      </aside>
+      <section class="content">
+        <h1>線形代数学第一動画まとめ</h1>
+        <a href="https://youtu.be/_TGC3rnWxDc?si=5zFyJMe_3a-HvdxP"class="btn btn-flat"><span>　 行列式の定義と性質 ></a>
+        <a href="https://youtu.be/VwZ0EtT_UiI?si=YcrZeodaWSq0SsY2"class="btn btn-flat"><span>　 　 余因子展開 　 　></a>
+        <a href="https://youtu.be/VwZ0EtT_UiI?si=c1LvarxY2PqKnIsg"class="btn btn-flat"><span>　 　逆行列の定義　 　></a>
+        <a href="https://youtu.be/K9yZYDUHEVQ?si=spE_sRzKakRz4Wpt"class="btn btn-flat"><span>　　 　掃出し法　　 　></a>
+        <a href="https://youtu.be/_TgBFx0jwRQ?si=Ay7EkX9wvGpRAzIb"class="btn btn-flat"><span>固有値・固有ベクトル ></a>
+        <a href="https://youtu.be/FTC_aekgqCg?si=tqyqbbVcmxFkUyMa"class="btn btn-flat"><span>　　対角化(重解なし)　></a>
+        <a href="https://youtu.be/FTC_aekgqCg?si=SU1113hKL0GlezU4"class="btn btn-flat"><span>　　対角化(重解あり)　></a>
+        </ol>
+      </section>
+    </div>
+    <footer>
+      <p>2024 Computer Literacy</p>
+  </footer>
+    </body>
 </html>
